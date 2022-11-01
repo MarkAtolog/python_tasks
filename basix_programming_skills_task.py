@@ -11,13 +11,16 @@ def get_latest_file_with_extension(dir_path: str, file_extension: str):
                     list(itertools.takewhile(lambda file: file[1] > files[0][1] - 10, files))]
     return latest_files[0], latest_files[1:]
 
+
 def get_difference_with_collections(list1: list, list2: list) -> list:
     return list(set(list1) - set(list2))
+
 
 def get_difference_without_collections(list1: list, list2: list) -> list:
     return [x for x in list1 if x not in list2]
 
-def file_manipulation(path_to_txt_file: str, line_numbers = (10,)):
+
+def file_manipulation(path_to_txt_file: str, line_numbers=(10,)):
     with open(path_to_txt_file, "r+") as input_file:
         lines = input_file.readlines()
         cut_lines = []
@@ -41,6 +44,3 @@ if __name__ == '__main__':
     print(get_difference_without_collections(list1, list2))
 
     file_manipulation("file.txt")
-
-
-
