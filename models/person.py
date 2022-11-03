@@ -1,10 +1,10 @@
 import json
 
 from models.address import Address
-from utils.json_encoder import ComplexEncoder
+from models.base_model import BaseModel
 
 
-class Person:
+class Person(BaseModel):
     def __init__(self,
                  name: str,
                  surname: str,
@@ -19,19 +19,6 @@ class Person:
 
     def json_repr(self):
         return self.__dict__
-
-    @classmethod
-    def from_string(cls, json_string: str):
-        return cls.from_dict(json.loads(json_string))
-
-    @classmethod
-    def from_dict(cls, dict_to_parse: dict):
-        return cls(**dict_to_parse)
-
-    @classmethod
-    def from_file(cls, path_to_file: str):
-        with open(path_to_file, "r", encoding="Utf-8") as file:
-            return cls.from_dict(json.load(file))
 
     def __str__(self):
         return self.__dict__.__str__()
