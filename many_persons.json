@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Alex",
+    "surname": "Alexson",
+    "age": 14,
+    "phone_number": [
+      "88005553535",
+      "+375442281488"
+    ],
+    "address": [
+      {
+        "country": "Poland",
+        "city": "Warsaw",
+        "street": "Some street",
+        "house": 14,
+        "letter": "g",
+        "index": "228-338"
+      },
+      {
+        "country": "Japan",
+        "city": "Kyoto",
+        "street": "Another street",
+        "house": 1488,
+        "letter": "B",
+        "index": "444-444"
+      }
+    ]
+  },
+  {
+    "name": "Aleks",
+    "surname": "Alekseev",
+    "age": 18,
+    "phone_number": [
+      "88005553535",
+      "+375256666632"
+    ],
+    "address": [
+      {
+        "country": "Belarus",
+        "city": "Minsk",
+        "street": "My street",
+        "house": 12,
+        "letter": null,
+        "index": "222-333"
+      },
+      {
+        "country": "Georgia",
+        "city": "Tbilisi",
+        "street": "My street2",
+        "house": 300,
+        "letter": "A",
+        "index": "333-222"
+      }
+    ]
+  }
+]
