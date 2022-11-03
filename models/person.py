@@ -20,10 +20,6 @@ class Person:
     def json_repr(self):
         return self.__dict__
 
-    def to_new_file(self, file_name: str):
-        with open(file_name, "w", encoding="Utf-8") as file:
-            json.dump(self.__dict__, file, cls=ComplexEncoder, indent=2)
-
     @classmethod
     def from_string(cls, json_string: str):
         return cls.from_dict(json.loads(json_string))
