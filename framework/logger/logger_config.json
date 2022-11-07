@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "disable_existing_loggers": "False",
+  "formatters": {
+    "default_formatter": {
+      "format": "[%(levelname)s:%(asctime)s] %(message)s"
+    }
+  },
+  "handlers": {
+    "file_handler": {
+      "class": "logging.handlers.RotatingFileHandler",
+      "maxBytes": 2000,
+      "formatter": "default_formatter",
+      "filename": "test.log",
+      "level": "INFO"
+    },
+    "stream_handler": {
+      "class": "logging.StreamHandler",
+      "formatter": "default_formatter",
+      "level": "DEBUG"
+    }
+  },
+  "loggers": {
+    "main_logger": {
+      "handlers": [
+        "file_handler",
+        "stream_handler"
+      ],
+      "level": "DEBUG",
+      "propagate": "True"
+    }
+  }
+}
